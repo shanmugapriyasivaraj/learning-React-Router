@@ -15,7 +15,7 @@ function App() {
   return (
     <BrowserRouter>
       <div>
-        <NavLink exact activeStyle={{ color: "green" }} to="/">
+        <NavLink exact activeClass="active-nav" to="/">
           Home
         </NavLink>
         <NavLink activeStyle={{ color: "green" }} to="/about">
