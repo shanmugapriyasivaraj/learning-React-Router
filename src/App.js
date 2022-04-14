@@ -9,6 +9,7 @@ import {
 import Home from "./Home";
 import About from "./About";
 import Posts from "./Posts";
+import Post from "./Post";
 import NotFound from "./NotFound";
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/about" component={About} />
+        <Route path="/posts/:id" omponent={Post} />
         <Route path="/posts" component={Posts} />
         <Route path="/home" />
         <Redirect to="/" />
