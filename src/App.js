@@ -1,4 +1,10 @@
-import { BrowserRouter, Route, Switch, Redirect, Link } from "react-router-dom";
+import {
+  BrowserRouter,
+  Route,
+  Switch,
+  Redirect,
+  NavLink,
+} from "react-router-dom";
 
 import Home from "./Home";
 import About from "./About";
@@ -9,9 +15,15 @@ function App() {
   return (
     <BrowserRouter>
       <div>
-        <Link href="/">Home</Link>
-        <Link href="/about">About</Link>
-        <Link href="/posts">Posts</Link>
+        <NavLink exact activeStyle={{ color: "green" }} to="/">
+          Home
+        </NavLink>
+        <NavLink activeStyle={{ color: "green" }} to="/about">
+          About
+        </NavLink>
+        <NavLink activeStyle={{ color: "green" }} to="/posts">
+          Posts
+        </NavLink>
       </div>
 
       <Switch>
